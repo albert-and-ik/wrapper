@@ -1,12 +1,12 @@
 ## Wrapper 
 Предназначен для обертки ответов перед отправкой клиенту.
-По умолчанию используется [SimpleWrapperModel](tree/master/src/main/java/com/example/wrapper/model/SimpleWrapperModel.java):
+По умолчанию используется [SimpleWrapperModel](/src/main/java/com/example/wrapper/model/SimpleWrapperModel.java):
 ```json
 {
     "data" : {"you": "response"}
 }
 ```
-Для того чтобы использовать свою обертку нужно создать Bean унаследованный от [AbstractWrapperModel< T >](tree/master/src/main/java/com/example/wrapper/model/AbstractWrapperModel.java) 
+Для того чтобы использовать свою обертку нужно создать Bean унаследованный от [AbstractWrapperModel< T >](/src/main/java/com/example/wrapper/model/AbstractWrapperModel.java) 
 и реализовать метод `void setResponse(T data)`
 
 Унаследованный класс должен содержать в себе конструктор без параметров, getters/setters для всех полей или проще говоря быть [POJO](https://en.wikipedia.org/wiki/Plain_old_Java_object). 
